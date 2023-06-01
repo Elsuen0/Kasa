@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 100px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 100px;
+    text-decoration: none;
+
+    a {
+        text-decoration: none;
+        color: $colorLink;
+    }
+}
+
+.accueil {
+    margin-right: 57px;
+}
