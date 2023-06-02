@@ -1,0 +1,68 @@
+.card {
+    /**border: 1px solid purple;**/
+    height: 340px;
+    width: 340px;
+    position: relative;
+    background-color: black;
+    border-radius: 10px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        border-radius: 10px;
+    }
+
+    h3 {
+        margin: 0px 20px 20px 20px;
+        font-family: $primaryFont;
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+    }
+
+    &-1 {
+        margin-top: 56px;
+        margin-left: 50px;
+    }
+
+    &-2 {
+        margin-top: 56px;
+    }
+
+    &-3 {
+        margin-top: 56px;
+        margin-right: 50px;
+    }
+
+    &-4 {
+        margin-bottom: 43px;
+        margin-left: 50px;
+    }
+
+}
+
+.h3 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.app {
+    width: 1240px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 43px;
+    margin-bottom: 50px;
+
+
+    /**border: 2px solid red;**/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+
+    background-color: #F7F7F7;
+    border-radius: 25px;
+}
