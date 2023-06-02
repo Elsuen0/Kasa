@@ -6,7 +6,7 @@ import Error from '../components/Error';
 
 const Error404 = () => {
     return (
-        <body>
+        <div>
             <header>
                 <Logo />
                 <Navigation />
@@ -19,7 +19,7 @@ const Error404 = () => {
             <footer>
                 <Footer />
             </footer>
-        </body>
+        </div>
     );
 };
 
