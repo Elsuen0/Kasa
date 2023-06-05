@@ -20,9 +20,11 @@ const Home = () => {
             <main>
                 <TopBackground />
                 <div className="app">
+
                     {logementsAAfficher.map((logement, index) => (
-                        <Card key={logement.id} nom={logement.title} photo={logement.cover} className={`card-${index + 1}`} />
+                        <Card key={logement.id} id={logement.id} nom={logement.title} photo={logement.cover} className={`card-${index + 1}`} />
                     ))}
+
                 </div>
             </main>
 
