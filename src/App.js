@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import FicheLogement from "./pages/FicheLogement";
+import Logements from "./pages/Logements";
 import Error404 from "./pages/Error404";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/FicheLogement' element={<FicheLogement />} />
+        <Route path='/Logements/:id' Component={Logements} />
         <Route path='*' element={<Error404 />} />
       </Routes>
     </BrowserRouter>
