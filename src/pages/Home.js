@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
 import Logo from '../components/Banner';
 import Footer from '../components/Footer';
 import TopBackground from '../components/TopBackground';
@@ -14,7 +13,6 @@ const Home = () => {
         <div className='stylePrincipal'>
             <header>
                 <Logo />
-                <Navigation />
             </header>
 
             <main>
