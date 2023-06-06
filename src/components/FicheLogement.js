@@ -10,9 +10,9 @@ const FicheLogement = () => {
     return (
         <div>
             {logement ? (
-                <div>
-                    <Carrousel />
-                </div>
+
+                <Carrousel id={logement.id} images={logement.pictures} />
+
             ) : (
                 <div>
                     {/* Message d'erreur ou redirection */}
