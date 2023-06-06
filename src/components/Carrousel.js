@@ -1,57 +1,44 @@
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 
-
-const Carrousel = () => {
-    const PrevArrow = (props) => {
-        const { className, style, onClick } = props;
+const Carrousel = ({ images, id }) => {
+    const renderCustomArrowPrev = (onClickHandler, hasPrev, label) => {
         return (
-            <div
-                className={className}
-                style={{ ...style, display: 'block' }}
-                onClick={onClick}
-            >
-                Previous
-            </div>
+            <button className='custom-arrow-prev' onClick={onClickHandler} disabled={!hasPrev}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
         );
     };
 
-    const NextArrow = (props) => {
-        const { className, style, onClick } = props;
+    const renderCustomArrowNext = (onClickHandler, hasPrev, label) => {
         return (
-            <div
-                className={className}
-                style={{ ...style, display: 'block', border: '2px solid red' }}
-                onClick={onClick}
-            >
-                Next
-            </div>
+            <button className='custom-arrow-next' onClick={onClickHandler} disabled={!hasPrev}>
+                <FontAwesomeIcon icon={faChevronRight} />
+            </button>
         );
     };
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        PrevArrow: <PrevArrow />,
-        NextArrow: <NextArrow />
-    };
-
-
     return (
-        <Slider {...settings}>
-            <div>
-                <h3>Slide 1</h3>
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg" alt="" />
-            </div>
-            <div>
-                <h3>Slide 2</h3>
-            </div>
-        </Slider>
+        <div className="carousel-container">
+            <Carousel
+                infiniteLoop={true}
+                showThumbs={false}
+                showIndicators={false}
+                showStatus={true}
+                width={1240}
+                renderArrowPrev={renderCustomArrowPrev}
+                renderArrowNext={renderCustomArrowNext}>
+                {images.map((image, index) => (
+                    <div className='carousel-container-img' key={index}>
+                        <img className={`carousel-container-img-${id}-${index + 1}`} key={index} src={image} alt="" />
+                    </div>
+                ))}
+            </Carousel>
+
+        </div>
     );
 };
 
