@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
 import Logo from '../components/Banner';
 import Footer from '../components/Footer'
 
@@ -8,7 +7,6 @@ const About = () => {
         <div>
             <header>
                 <Logo />
-                <Navigation />
             </header>
 
             <main>
