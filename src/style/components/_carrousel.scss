@@ -1,0 +1,118 @@
+.carousel {
+    border-radius: 25px;
+    width: 1240px;
+}
+
+.carousel-container-img {
+    height: 415px;
+
+    z-index: 1;
+
+    &-c67ab8a7-1 {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 80%;
+    }
+
+    &-c67ab8a7-2 {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 62%;
+    }
+
+    &-c67ab8a7-3 {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-c67ab8a7-4 {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-c67ab8a7-5 {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 62%;
+    }
+
+    &-b9123946-1 {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 70%;
+    }
+
+    &-b9123946-2 {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 70%;
+    }
+
+    &-b9123946-3 {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-b9123946-4 {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+
+    &-b9123946-5 {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-b9123946-6 {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 40%;
+    }
+}
+
+.custom-arrow {
+
+    &-prev {
+        border: none;
+
+        font-size: 80px;
+        color: white;
+
+        background: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+
+        height: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-next {
+        border: none;
+
+        font-size: 80px;
+        color: white;
+
+        background: none;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+
+        height: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+}
+
+.carousel-status {
+    color: red;
+}
