@@ -1,43 +1,42 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
+
 
 
 const Carrousel = ({ images, id }) => {
-    const renderCustomArrowPrev = (onClickHandler, hasPrev, label) => {
-        return (
-            <button className='custom-arrow-prev' onClick={onClickHandler} disabled={!hasPrev}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-            </button>
-        );
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
     };
 
-    const renderCustomArrowNext = (onClickHandler, hasPrev, label) => {
-        return (
-            <button className='custom-arrow-next' onClick={onClickHandler} disabled={!hasPrev}>
-                <FontAwesomeIcon icon={faChevronRight} />
-            </button>
-        );
+    const prevSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
     };
+
     return (
-        <div className="carousel-container">
-            <Carousel
-                infiniteLoop={true}
-                showThumbs={false}
-                showIndicators={false}
-                showStatus={true}
-                width={1240}
-                renderArrowPrev={renderCustomArrowPrev}
-                renderArrowNext={renderCustomArrowNext}>
+        <div className="carousel">
+            <button className='prevButton' onClick={prevSlide}><FontAwesomeIcon icon={faChevronLeft} /></button>
+            <div className="carousel-container">
+
                 {images.map((image, index) => (
-                    <div className='carousel-container-img' key={index}>
-                        <img className={`carousel-container-img-${id}-${index + 1}`} key={index} src={image} alt="" />
+                    <div className={`carousel-container-img ${currentSlide === index ? 'active' : ''}`} key={index} style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        opacity: currentSlide === index ? 1 : 0,
+                        transition: 'opacity 0.5s ease', zIndex: currentSlide === index ? 1 : 0
+                    }}>
+                        <img className={` settingsImg carousel-container-img-${id}-${index + 1}`} src={image} alt={`Slide ${index}`} />
                     </div>
                 ))}
-            </Carousel>
 
+            </div>
+            <button className='nextButton' onClick={nextSlide}><FontAwesomeIcon icon={faChevronRight} /></button>
+            <div className="carousel-counter">
+                {currentSlide + 1} / {images.length}
+            </div>
         </div>
     );
 };
