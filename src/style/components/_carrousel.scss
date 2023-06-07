@@ -1,118 +1,152 @@
 .carousel {
-    border-radius: 25px;
-    width: 1240px;
-}
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
 
-.carousel-container-img {
-    height: 415px;
-
-    z-index: 1;
-
-    &-c67ab8a7-1 {
-        height: 100%;
-        object-fit: cover;
-        object-position: center 80%;
+    .carousel-container {
+        border-radius: 25px;
+        width: 1240px;
+        position: relative;
+        height: 415px;
     }
 
-    &-c67ab8a7-2 {
-        height: 100%;
-        object-fit: cover;
-        object-position: center 62%;
-    }
-
-    &-c67ab8a7-3 {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &-c67ab8a7-4 {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &-c67ab8a7-5 {
-        height: 100%;
-        object-fit: cover;
-        object-position: center 62%;
-    }
-
-    &-b9123946-1 {
-        height: 100%;
-        object-fit: cover;
-        object-position: center 70%;
-    }
-
-    &-b9123946-2 {
-        height: 100%;
-        object-fit: cover;
-        object-position: center 70%;
-    }
-
-    &-b9123946-3 {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &-b9123946-4 {
-        height: 100%;
-        object-fit: cover;
-        object-position: center 30%;
-    }
-
-    &-b9123946-5 {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &-b9123946-6 {
-        height: 100%;
-        object-fit: cover;
-        object-position: center 40%;
-    }
-}
-
-.custom-arrow {
-
-    &-prev {
-        border: none;
-
-        font-size: 80px;
-        color: white;
-
-        background: none;
+    .prevButton {
         position: absolute;
-        top: 0px;
-        left: 0px;
         z-index: 2;
-
-        height: 100%;
-
-        &:hover {
-            cursor: pointer;
-        }
+        height: 415px;
+        background: none;
+        font-size: 70px;
+        color: white;
+        border: none;
     }
 
-    &-next {
-        border: none;
-
-        font-size: 80px;
-        color: white;
-
-        background: none;
+    .nextButton {
         position: absolute;
         right: 0px;
         top: 0px;
+        z-index: 2;
+        height: 415px;
+        background: none;
+        font-size: 70px;
+        color: white;
+        border: none;
+    }
 
+    .carousel-counter {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+        left: 0px;
+        z-index: 2;
+        width: 100%;
+
+        color: white;
+        font-family: $primaryFont;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .settingsImg {
+        border-radius: 25px;
+        width: 100%;
         height: 100%;
+        object-fit: cover;
+    }
 
-        &:hover {
-            cursor: pointer;
+    .carousel-container-img {
+        height: 415px;
+        z-index: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition: opacity 0.5s ease 0s;
+        width: 100%;
+
+        &-c67ab8a7-1 {
+            object-position: center 80%;
+        }
+
+        &-c67ab8a7-2 {
+            object-position: center 62%;
+        }
+
+        &-c67ab8a7-3 {
+            object-fit: cover;
+        }
+
+        &-c67ab8a7-4 {
+            object-fit: cover;
+        }
+
+        &-c67ab8a7-5 {
+            object-fit: cover;
+            object-position: center 62%;
+        }
+
+        &-b9123946-1 {
+            object-fit: cover;
+            object-position: center 70%;
+        }
+
+        &-b9123946-2 {
+            object-fit: cover;
+            object-position: center 70%;
+        }
+
+        &-b9123946-3 {
+            object-fit: cover;
+        }
+
+        &-b9123946-4 {
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        &-b9123946-5 {
+            object-fit: cover;
+        }
+
+        &-b9123946-6 {
+            object-fit: cover;
+            object-position: center 40%;
         }
     }
 
+    .custom-arrow {
+        &-prev {
+            border: none;
+            font-size: 80px;
+            color: white;
+            background: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+            height: 100%;
 
-}
+            &:hover {
+                cursor: pointer;
+            }
+        }
 
-.carousel-status {
-    color: red;
+        &-next {
+            border: none;
+            font-size: 80px;
+            color: white;
+            background: none;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 100%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .carousel-status {
+        color: red;
+    }
 }
