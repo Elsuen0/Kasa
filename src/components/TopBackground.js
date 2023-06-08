@@ -1,10 +1,10 @@
 import React from 'react';
 
-const TopBackground = () => {
+const TopBackground = ({ image, h1, className }) => {
     return (
-        <div className='topBackground'>
-            <img src="./imageSource1.png" alt="" />
-            <h1>Chez vous, partout et ailleurs</h1>
+        <div className={className}>
+            <img src={image} alt="" />
+            <h1>{h1}</h1>
         </div>
     );
 };

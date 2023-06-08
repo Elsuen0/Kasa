@@ -16,7 +16,7 @@ const Home = () => {
             </header>
 
             <main>
-                <TopBackground />
+                <TopBackground image="./imageSource1.png" h1='Chez vous, partout et ailleurs' className='topBackground' />
                 <div className="app">
 
                     {logementsAAfficher.map((logement, index) => (
