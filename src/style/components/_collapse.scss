@@ -1,0 +1,52 @@
+.collapse {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.collapse_title {
+    /**border: 2px solid red;**/
+    width: 1023px;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #FF6060;
+    color: white;
+
+    border-radius: 5px;
+
+    p {
+        font-family: $primaryFont;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    button {
+        transition: transform 0.3s ease;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+
+        &.collapsed {
+            transform: rotate(0deg);
+        }
+
+        &.expanded {
+            transform: rotate(180deg);
+        }
+    }
+
+}
+
+.collapse_content {
+    color: #FF6060;
+    z-index: 1;
+    width: 1023px;
+    background-color: #f7f7f7;
+    font-family: $primaryFont;
+    font-size: 18px;
+
+}
