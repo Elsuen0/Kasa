@@ -49,4 +49,17 @@
     font-family: $primaryFont;
     font-size: 18px;
 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    transition-duration: 1s;
+
+}
+
+.collapse_content.expanded {
+    max-height: 500px;
+}
+
+.collapse_content.collapsed {
+    max-height: 0;
 }
