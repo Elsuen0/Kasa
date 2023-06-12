@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const Collapse = ({ content, name }) => {
+const Collapse = ({ content, name, className }) => {
     const [isCollapsed, setIsCollapsed] = useState(true);
 
     const toggleCollapse = () => {
@@ -10,7 +10,7 @@ const Collapse = ({ content, name }) => {
     };
 
     return (
-        <div className='collapse'>
+        <div className={className}>
             <div className='collapse_title'>
                 <p>{name}</p>
                 <button onClick={toggleCollapse} className={isCollapsed ? 'collapsed' : 'expanded'}>
