@@ -15,16 +15,19 @@ const Logements = () => {
             {
                 logement ? (
 
-                    <div>
+                    <div className='stylePrincipal'>
                         <header>
                             <Logo />
                         </header>
 
-                        <main>
-                            <FicheLogement />
+                        <main className='mainLogement'>
+                            <div>
+                                <FicheLogement />
+                            </div>
+
                         </main>
 
-                        <footer>
+                        <footer className='footerLogement'>
                             <Footer />
                         </footer>
                     </div >
