@@ -1,0 +1,110 @@
+.mainLogement {
+    position: relative;
+    height: 1240px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.firstLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_settings h1 {
+    /**border: 2px solid red;**/
+    margin: 0px;
+    font-family: $primaryFont;
+    font-weight: 500;
+    font-size: 36px;
+    color: $colorLink;
+    line-height: 150%;
+
+    +h2 {
+        margin: 0px;
+        font-family: $primaryFont;
+        font-weight: 500;
+        font-size: 18px;
+        color: $colorLink;
+    }
+}
+
+
+
+.profile_settings {
+    width: 167px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    h3 {
+        margin: 0px;
+        font-size: 18px;
+        font-family: $primaryFont;
+        font-weight: 500;
+        color: $colorLink;
+    }
+
+    img {
+        border-radius: 50%;
+        height: 100%;
+    }
+}
+
+.secondLine {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.tag_content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.tag {
+    width: auto;
+    height: 25px;
+    background-color: $colorLink;
+    color: white;
+    font-family: $primaryFont;
+    font-size: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    margin-right: 10px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.rating {
+    display: flex;
+    font-size: 25px;
+}
+
+.stars_settings {
+    margin-left: 10px;
+    color: $colorLink;
+}
+
+.starEmpty {
+    color: #E3E3E3;
+}
+
+.thirdLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse_logement {
+    width: 580px;
+}
