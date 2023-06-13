@@ -8,19 +8,26 @@ import Tag from './Tag';
 import Rating from './Rating';
 import Collapse from './Collapse';
 
+
+// Définition du composant ficheLogement
 const FicheLogement = () => {
+    // Récupération de l'ID du logement à partir des paramètres de l'url
     const { id } = useParams();
+
+    // Recherche du logement correspondant à l'ID spécifié
     const logement = data.find(logement => logement.id === id);
 
     return (
         <div>
+
+            {/*Vérification si le logement existe */}
             {logement ? (
 
+                // Affichage di Caroussel avec les images du logement
                 <Carrousel id={logement.id} images={logement.pictures} />
 
             ) : (
                 <div>
-                    {/* Message d'erreur ou redirection */}
                     <h1>Logement non trouvé</h1>
                 </div>
             )}
