@@ -3,23 +3,30 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import React, { useState } from 'react';
 
 
-
+// Définition du composant Carrousel qui prend 2 props : 'images' et 'id'
 const Carrousel = ({ images, id }) => {
+
+    // Utilisation du hook useState pour gérer l'état du slide actuel
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    // Fonction pour passer au slide suivant
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
     };
 
+    // Fonction pour revenir au slide précédent
     const prevSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
     };
 
+
+    // Rendu du componsant Carrousel 
     return (
         <div className="carousel">
             <button className='prevButton' onClick={prevSlide}><FontAwesomeIcon icon={faChevronLeft} /></button>
             <div className="carousel-container">
 
+                {/*Boucle sur le tableau d'images pour les afficher dans le carrousel */}
                 {images.map((image, index) => (
                     <div className={`carousel-container-img ${currentSlide === index ? 'active' : ''}`} key={index} style={{
                         position: 'absolute',
