@@ -25,3 +25,32 @@ header {
 .accueil {
     margin-right: 57px;
 }
+
+@media screen and (max-width: 375px) {
+    header {
+        border: 2px solid red;
+        width: 335px;
+    }
+
+    .logo {
+        width: 145px;
+        align-items: center;
+
+        img {
+            width: 145px;
+        }
+    }
+
+    .accueil {
+        margin-right: 26px;
+    }
+
+    .navigation {
+        font-size: 12px;
+        text-transform: uppercase;
+
+        ul a {
+            width: max-content;
+        }
+    }
+}

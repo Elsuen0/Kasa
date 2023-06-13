@@ -7,8 +7,9 @@
 
 .firstLine {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 27px;
 }
 
 .title_settings h1 {
@@ -20,13 +21,15 @@
     color: $colorLink;
     line-height: 150%;
 
-    +h2 {
-        margin: 0px;
-        font-family: $primaryFont;
-        font-weight: 500;
-        font-size: 18px;
-        color: $colorLink;
-    }
+
+}
+
+h2 {
+    margin: 0px;
+    font-family: $primaryFont;
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorLink;
 }
 
 
@@ -55,6 +58,7 @@
 
 .secondLine {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 24px;
@@ -107,4 +111,94 @@
 
 .collapse_logement {
     width: 580px;
+}
+
+@media screen and (max-width:375px) {
+
+    .mainLogement {
+        height: auto;
+    }
+
+    .firstLine_secondLine {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firstLine {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+
+    .secondLine {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 0px;
+
+        .profile_settings {
+            height: 32px;
+            width: 135.5px;
+
+            h3 {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .thirdLine {
+        flex-direction: column;
+
+        .collapse_logement {
+            width: auto;
+
+            .collapse_title {
+
+                p {
+                    font-size: 13px;
+                }
+
+                .collapsed,
+                .expanded {
+                    font-size: 15px;
+                }
+            }
+
+            .collapse_content.expanded {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .title_settings {
+        margin-bottom: 10px;
+
+        h1 {
+            font-size: 18px;
+        }
+
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+
+    .tag_content {
+        margin: 0px;
+
+        .tag {
+            height: 18px;
+            font-size: 10px;
+        }
+    }
+
+    .rating {
+        width: 98px;
+
+        .stars_settings {
+            margin-left: 6.59px;
+            font-size: 12px;
+        }
+    }
 }

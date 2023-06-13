@@ -32,3 +32,25 @@
 .topBackground_about {
     margin-bottom: 38px;
 }
+
+@media screen and (max-width: 375px) {
+    .topBackground {
+        height: 111px;
+        width: 335px;
+
+        border-radius: 10px;
+        position: relative;
+
+        margin-top: 30px;
+
+        img {
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            width: 217px;
+            left: 16px;
+        }
+    }
+}

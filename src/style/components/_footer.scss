@@ -29,3 +29,18 @@ footer {
         margin-bottom: 29px;
     }
 }
+
+@media screen and (max-width:375px) {
+    .tousDroitsReserves {
+        font-size: 12px;
+
+        p {
+            width: 134px;
+            text-align: center;
+        }
+    }
+
+    .footerGroup {
+        justify-content: center;
+    }
+}

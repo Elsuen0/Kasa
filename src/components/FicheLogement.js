@@ -18,7 +18,7 @@ const FicheLogement = () => {
     const logement = data.find(logement => logement.id === id);
 
     return (
-        <div>
+        <div className='ficheLogement_width'>
 
             {/*Vérification si le logement existe */}
             {logement ? (
@@ -31,14 +31,17 @@ const FicheLogement = () => {
                     <h1>Logement non trouvé</h1>
                 </div>
             )}
-            <div className='firstLine'>
-                <TitleLogement title={logement.title} subTitle={logement.location} />
-                <Profiluser id={logement.id} profileImg={logement.host.picture} hostName={logement.host.name} />
-            </div>
+            <div className='firstLine_secondLine'>
+                <div className='firstLine'>
+                    <TitleLogement title={logement.title} subTitle={logement.location} />
+                    <Tag />
 
-            <div className="secondLine">
-                <Tag />
-                <Rating rating={logement.rating} />
+                </div>
+
+                <div className="secondLine">
+                    <Profiluser id={logement.id} profileImg={logement.host.picture} hostName={logement.host.name} />
+                    <Rating rating={logement.rating} />
+                </div>
             </div>
 
             <div className="thirdLine">

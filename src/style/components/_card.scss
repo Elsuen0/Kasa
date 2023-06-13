@@ -66,3 +66,51 @@
     background-color: #F7F7F7;
     border-radius: 25px;
 }
+
+@media screen and (max-width: 375px) {
+    .card {
+        height: 255px;
+        width: 335px;
+
+
+        &-1 {
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        &-2 {
+            margin-top: 0px;
+        }
+
+        &-3 {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 27px;
+        }
+
+        &-4 {
+            display: none;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+
+        &-5 {
+            display: none;
+        }
+
+        &-6 {
+            display: none;
+        }
+    }
+
+    .app {
+        width: 335px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 22px;
+        margin-bottom: 0px;
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+    }
+}

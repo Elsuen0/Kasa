@@ -21,9 +21,9 @@ const Logements = () => {
                         </header>
 
                         <main className='mainLogement'>
-                            <div>
-                                <FicheLogement />
-                            </div>
+
+                            <FicheLogement />
+
 
                         </main>
 
