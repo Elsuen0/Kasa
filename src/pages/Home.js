@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import TopBackground from '../components/TopBackground';
 import Card from '../components/Card';
 import data from '../Logement.json';
+import Navigation from '../components/Navigation';
 
 const Home = () => {
     const nombreLogementAAfficher = 6;
@@ -13,6 +14,7 @@ const Home = () => {
         <div className='stylePrincipal'>
             <header>
                 <Logo />
+                <Navigation />
             </header>
 
             <main>

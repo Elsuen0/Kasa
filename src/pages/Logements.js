@@ -5,6 +5,7 @@ import FicheLogement from '../components/FicheLogement';
 import data from '../Logement.json';
 import { useParams } from 'react-router-dom';
 import Error404 from './Error404';
+import Navigation from '../components/Navigation';
 
 const Logements = () => {
     const { id } = useParams();
@@ -18,6 +19,7 @@ const Logements = () => {
                     <div className='stylePrincipal'>
                         <header>
                             <Logo />
+                            <Navigation />
                         </header>
 
                         <main className='mainLogement'>
