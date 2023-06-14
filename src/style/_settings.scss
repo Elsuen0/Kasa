@@ -29,9 +29,9 @@ main {
     margin-left: 100px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 280px) and (max-width: 1439px) {
     body {
-        max-width: 375px;
+        max-width: 100%;
     }
 
     .stylePrincipal {
@@ -41,5 +41,9 @@ main {
 
     .ficheLogement_width {
         width: 100%;
+    }
+
+    .main_about {
+        height: auto;
     }
 }

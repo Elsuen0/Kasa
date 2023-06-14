@@ -52,8 +52,7 @@
 
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-
+    transition: max-height 1s ease-out;
 }
 
 .collapse_content.expanded {
@@ -62,4 +61,29 @@
 
 .collapse_content.collapsed {
     max-height: 0;
+}
+
+@media screen and (min-width:279px) and (max-width: 1439px) {
+    .collapse_settings {
+        width: 100%;
+
+        .collapse {
+            width: auto;
+
+            .collapse_title {
+                .collapse_content {
+                    font-size: 13px;
+                }
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 13px;
+            }
+        }
+    }
+
 }

@@ -19,6 +19,7 @@ header {
     a {
         text-decoration: none;
         color: $colorLink;
+        width: max-content;
     }
 }
 
@@ -26,18 +27,18 @@ header {
     margin-right: 57px;
 }
 
-@media screen and (max-width: 375px) {
+
+@media screen and (min-width:279px) and (max-width: 1439px) {
     header {
-        border: 2px solid red;
-        width: 335px;
+        width: 100%;
     }
 
     .logo {
-        width: 145px;
         align-items: center;
+        width: 145px;
 
         img {
-            width: 145px;
+            width: 100%;
         }
     }
 

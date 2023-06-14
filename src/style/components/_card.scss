@@ -67,10 +67,10 @@
     border-radius: 25px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width:279px) and (max-width: 1439px) {
     .card {
         height: 255px;
-        width: 335px;
+        width: 100%;
 
 
         &-1 {
@@ -104,7 +104,7 @@
     }
 
     .app {
-        width: 335px;
+        width: 100%;
         margin-left: 20px;
         margin-right: 20px;
         margin-top: 22px;
