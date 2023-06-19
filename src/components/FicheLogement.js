@@ -20,17 +20,10 @@ const FicheLogement = () => {
     return (
         <div className='ficheLogement_width'>
 
-            {/*Vérification si le logement existe */}
-            {logement ? (
+            {/* Affichage du Caroussel avec les images du logement */}
+            <Carrousel id={logement.id} images={logement.pictures} />
 
-                // Affichage di Caroussel avec les images du logement
-                <Carrousel id={logement.id} images={logement.pictures} />
 
-            ) : (
-                <div>
-                    <h1>Logement non trouvé</h1>
-                </div>
-            )}
             <div className='firstLine_secondLine'>
                 <div className='firstLine'>
                     <TitleLogement title={logement.title} subTitle={logement.location} />
